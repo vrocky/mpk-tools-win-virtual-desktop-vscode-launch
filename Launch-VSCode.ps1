@@ -2,7 +2,7 @@
 <#
 .SYNOPSIS
     Opens VS Code with an isolated profile for the current virtual desktop.
-    Profile dirs: C:\VSCodeProfiles\virtual_desktop_[N]\data|extensions
+    Profile dirs: C:\profiles_store\VSCodeProfiles\virtual_desktop_[N]\data|extensions
 
 .EXAMPLE
     .\Launch-VSCode.ps1
@@ -15,7 +15,7 @@ param(
 )
 
 $VSCodeExe    = "$env:LOCALAPPDATA\Programs\Microsoft VS Code\Code.exe"
-$ProfilesRoot = "C:\VSCodeProfiles"
+$ProfilesRoot = "C:\profiles_store\VSCodeProfiles"
 
 # ── Get current virtual desktop number ───────────────────────────────────────
 function Get-CurrentDesktopNumber {
